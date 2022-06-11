@@ -22,7 +22,7 @@ $(function () {
     const fileList = e.target.files.length;
     if (fileList === 0) return layer.msg("请选择文件！");
 
-    // 1. 拿到用户选择的文件`555555555554 
+    // 1. 拿到用户选择的文件`555555555554                                
     let file = e.target.files[0];
     // 2. 将文件，转化为路径
     var imgURL = URL.createObjectURL(file);
