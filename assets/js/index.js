@@ -7,11 +7,10 @@ function getUserInfo() {
     //   Authorization: localStorage.getItem("token"),
     // },
     success: (res) => {
-        if(res.status !== 0) return layer.msg(res.message)
-        layer.msg('成功 ')
+      if (res.status !== 0) return layer.msg(res.message);
+      layer.msg("成功 ");
       renderAvatar(res.data);
     },
-
   });
 }
 // 渲染用户头像
@@ -39,5 +38,8 @@ $("#tuichu").click(() => {
     location.href = "/login.html";
   });
 });
-// 获取用户列表
+// 获取用户列表getUserInfo();
 getUserInfo();
+function change(){
+  $('.change').addClass('layui-this').next().removeClass('layui-this');
+}
